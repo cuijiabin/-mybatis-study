@@ -11,7 +11,7 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
-@Ignore
+//@Ignore
 public class TestService {
 
     private static StudentService studentService;

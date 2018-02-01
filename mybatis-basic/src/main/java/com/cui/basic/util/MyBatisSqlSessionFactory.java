@@ -8,8 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.Properties;
 
 
@@ -55,18 +53,18 @@ public class MyBatisSqlSessionFactory {
 		return getSqlSessionFactory().openSession();
 	}
 
-	public static Connection getConnection() {
-		String driver = PROPERTIES.getProperty("jdbc.driverClassName");
-		String url = PROPERTIES.getProperty("jdbc.url");
-		String username = PROPERTIES.getProperty("jdbc.username");
-		String password = PROPERTIES.getProperty("jdbc.password");
-		Connection connection = null;
-		try {
-			Class.forName(driver);
-			connection = DriverManager.getConnection(url, username, password);
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-		return connection;
-	}
+//	public static Connection getConnection() {
+//		String driver = PROPERTIES.getProperty("jdbc.driverClassName");
+//		String url = PROPERTIES.getProperty("jdbc.url");
+//		String username = PROPERTIES.getProperty("jdbc.username");
+//		String password = PROPERTIES.getProperty("jdbc.password");
+//		Connection connection = null;
+//		try {
+//			Class.forName(driver);
+//			connection = DriverManager.getConnection(url, username, password);
+//		} catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
+//		return connection;
+//	}
 }

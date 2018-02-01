@@ -7,6 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>mybatis-basic</module>
+        <module>mybatis-xml</module>
     </modules>
     <packaging>pom</packaging>
 
